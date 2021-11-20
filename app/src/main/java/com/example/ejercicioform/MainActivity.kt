@@ -1,5 +1,6 @@
 package com.example.ejercicioform
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,16 +14,18 @@ class MainActivity :
     ) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val txtNombre =
-            findViewById<EditText>(R.id.nombre)
+        val numero1 =
+            findViewById<EditText>(R.id.numero1)
+        val numero2 =
+            findViewById<EditText>(R.id.numero2)
         val button =
             findViewById<Button>(R.id.button)
         button.setOnClickListener { view ->
-        val nombre =
-            txtNombre.text.toString()
+
+            val numeroT = numero1.text.toString().toInt() * numero2.text.toString().toInt()
+
         Snackbar.make(
-            view,
-            "Hola $nombre .",
+            view,"Multiplicar $numero1 X $numero2 = $numeroT",
             Snackbar.LENGTH_LONG
         ).show()
         }
