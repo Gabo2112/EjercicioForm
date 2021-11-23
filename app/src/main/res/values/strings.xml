@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">EjercicioForm</string>
-    <string name="calcular">Calcular</string>
-    <string name="numero1">Numero1</string>
+ <string
+     name="app_name">Formulario</string>
+    <string
+        name="calcular">Calcular</string>
+    <string
+        name="numero1">Numero1</string>
     <string name="numero2">Numero2</string>
 </resources>

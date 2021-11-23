@@ -1,33 +1,32 @@
 package com.example.ejercicioform
 
-
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity :
     AppCompatActivity() {
-    override fun onCreate
-    (savedInstanceState: Bundle?
+    override fun onCreate(
+        savedInstanceState: Bundle?
     ) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val numero1 =
+        val Numero1 =
             findViewById<EditText>(R.id.numero1)
-        val numero2 =
+        val Numero2 =
             findViewById<EditText>(R.id.numero2)
         val button =
             findViewById<Button>(R.id.button)
         button.setOnClickListener { view ->
-
-            val numeroT = numero1.text.toString().toInt() * numero2.text.toString().toInt()
-
-        Snackbar.make(
-            view,"Multiplicar $numero1 X $numero2 = $numeroT",
-            Snackbar.LENGTH_LONG
-        ).show()
+            val total =
+                Numero1.text.toString().toInt() * Numero2.text.toString().toInt()
+            Snackbar.make(
+                view,
+                "Total $total.",
+                Snackbar.LENGTH_LONG
+            ).show()
         }
     }
 }
